@@ -1,0 +1,193 @@
+:root{
+
+body {
+  margin: 0;
+  background: radial-gradient(
+      1200px 800px at 20% -10%,
+      #18213a,
+      transparent 60%
+    ),
+    radial-gradient(900px 600px at 110% 10%, #131b2e, transparent 60%),
+    linear-gradient(#0f1115, #0c0f16);
+  color: var(--text);
+}
+
+   a {
+    color: var(--text);
+    text-decoration: none;
+  }
+   .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  /* Header */
+   .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(15, 17, 21, 0.6);
+  }
+   .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+   .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+   .brand img {
+    height: 100px;
+  }
+   .brand span {
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+   .nav a.link {
+    opacity: 0.9;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+  }
+   .nav a.link:hover {
+    border-color: var(--border);
+    background: rgba(255, 255, 255, 0.03);
+  }
+   .cta {
+    background: var(--brand);
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-weight: 700;
+  }
+
+  /* Hero */
+   .hero {
+    padding: 56px 0 36px;
+  }
+   .hero h1 {
+    margin: 0;
+    font-size: 42px;
+    line-height: 1.1;
+    letter-spacing: 0.3px;
+  }
+   .hero p {
+    margin: 14px 0 0;
+    color: var(--muted);
+    font-size: 18px;
+  }
+   .badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* Grid cards */
+   .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    margin-top: 28px;
+  }
+   .card {
+    grid-column: span 6;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: linear-gradient(180deg, var(--surface), var(--surface-2));
+    box-shadow: var(--shadow);
+  }
+   .card h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+  }
+   .card p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* Timeline */
+   .timeline {
+    margin-top: 32px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    background: linear-gradient(180deg, var(--surface), var(--surface-2));
+  }
+   .step {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+   .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--brand);
+    margin-top: 6px;
+  }
+   .step h4 {
+    margin: 0;
+    font-size: 16px;
+  }
+   .step p {
+    margin: 6px 0 0;
+    color: var(--muted);
+  }
+
+  /* Team */
+   .team {
+    margin-top: 32px;
+  }
+   .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+   .person {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 14px;
+    background: linear-gradient(180deg, var(--surface), var(--surface-2));
+  }
+   .person h5 {
+    margin: 6px 0 4px;
+    font-size: 16px;
+  }
+   .person span {
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+   #iletisim {
+    margin-top: 32px;
+  }
+   #iletisim .grid > .card:first-child {
+    grid-column: span 7;
+  }
+   #iletisim .grid > .card:last-child {
+    grid-column: span 5;
+  }
+   #iletisim p.mt10 {
+    margin-top: 10px;
+  }
+
+  /* Hareket hassasiyeti olan kullanıcılar için animasyonları azalt */
+  @media (prefers-reduced-motion: reduce) {
+     .back {
+      transition: none;
+    }
+  }
+  }
